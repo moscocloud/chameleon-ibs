@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pages xmlns="http://chameleon.ibs-qa.ru/schema/web-elements">
+    <Page name="Главная страница" locator="//body">
+        <StaticText name="Заголовок таблицы" locator="//div[@class='container-fluid']/h5"/>
+        <StaticText name="Таблица" locator="//table[@class='table']"/>
+        <StaticText name="Заголовок Наименование" locator="//th[2]"/>
+        <StaticText name="Заголовок Тип" locator="//th[3]"/>
+        <StaticText name="Заголовок Экзотический" locator="//th[4]"/>
+        <Button name="Кнопка Добавить" locator="//button[@data-toggle='modal']"/>
+        <Collection name="Строки таблицы" locator="//table/tbody/tr">
+            <StaticText name="Столбец Наименование" locator="./td[1]"/>
+            <StaticText name="Столбец Тип" locator="./td[2]"/>
+            <StaticText name="Столбец Экзотический" locator="./td[3]"/>
+        </Collection>
+    </Page>
+    <Page name="Модальное окно" locator="//div[@class='modal-content']">
+        <StaticText name="Заголовок модального окна" locator="//h5[@class='modal-title']"/>
+        <StaticText name="Заголовок модального окна Наименование" locator="//label[@for='name']"/>
+        <StaticText name="Заголовок модального окна Тип" locator="//label[@for='type']"/>
+        <StaticText name="Заголовок модального окна Экзотический" locator="//label[@for='exotic']"/>
+        <Button name="Кнопка Сохранить" locator="//button[@id='save']"/>
+        <TextInput name="Поле Наименование" locator="//input[@id='name']"/>
+        <ComboBox name="Поле Тип" locator="//select[@name='type']"/>
+        <CheckBox name="Чекбокс Экзотический" locator="//input[@type='checkbox']"/>
+    </Page>
+</Pages>
