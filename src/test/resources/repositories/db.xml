@@ -6,6 +6,15 @@
             <FieldString name="Пароль" locator="password"/>
         </Params>
     </Connection>
+    <Query name="Перечень продуктов" statement="SELECT * FROM FOOD">
+        <Result>
+            <FieldInteger name="Идентификатор" locator="FOOD_ID"/>
+            <FieldString name="Имя" locator="FOOD_NAME"/>
+            <FieldString name="Тип" locator="FOOD_TYPE"/>
+            <FieldString name="Экзотический" locator="FOOD_EXOTIC"/>
+        </Result>
+    </Query>
+    <Query name="Удаление таблицы" statement="DROP TABLE PERSON"/>
     <Query name="Добавление продукта" statement="INSERT INTO FOOD(FOOD_ID, FOOD_NAME, FOOD_TYPE, FOOD_EXOTIC) values(:FOOD_ID, :FOOD_NAME, :FOOD_TYPE, :FOOD_EXOTIC)">
         <Params>
             <FieldInteger name="Идентификатор" locator="FOOD_ID"/>
@@ -20,13 +29,5 @@
         </Params>
     </Query>
 
-    <Query name="Перечень продуктов" statement="SELECT * FROM FOOD">
-        <Result>
-            <FieldInteger name="Идентификатор" locator="FOOD_ID"/>
-            <FieldString name="Имя" locator="FOOD_NAME"/>
-            <FieldString name="Тип" locator="FOOD_TYPE"/>
-            <FieldString name="Экзотический" locator="FOOD_EXOTIC"/>
-        </Result>
-    </Query>
-    <Query name="Удаление таблицы" statement="DROP TABLE PERSON"/>
+
 </DbGears>
